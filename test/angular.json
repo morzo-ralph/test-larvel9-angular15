@@ -25,6 +25,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -66,6 +67,10 @@
               "browserTarget": "test:build:development"
             }
           },
+          "options": {
+            "proxyConfig": "src/proxy.conf.json",
+            "browserTarget": "test:build"
+          },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
@@ -87,6 +92,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
