@@ -10,7 +10,24 @@ export class ServiceService {
 
   constructor(private http: HttpClient) { }
 
-  getAllArticle(uri:string) {
+  get(uri: string) {
     return this.http.get<any>(`${this.baseURL}/api/${uri}`);
   }
+
+  store(uri: string, payload: object) {
+    return this.http.post<any>(`${this.baseURL}/api/${uri}`, payload);
+  }
+
+  put(uri: string, payload: object) {
+    return this.http.put<any>(`${this.baseURL}/api/${uri}`, payload);
+  }
+
+  patch(uri: string, payload: object) {
+    return this.http.patch<any>(`${this.baseURL}/api/${uri}`, payload);
+  }
+
+  delete(uri: string) {
+    return this.http.delete(`${this.baseURL}/api/${uri}`);
+  }
+
 }

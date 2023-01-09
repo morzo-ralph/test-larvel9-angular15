@@ -1,0 +1,24 @@
+<button mat-button mat-dialog-close><mat-icon>close</mat-icon></button>
+<h1 mat-dialog-title>Login</h1>
+<div [formGroup]="articleForm">
+  <mat-form-field appearance="fill">
+    <mat-label>Article Title</mat-label>
+    <input matInput placeholder="title" required [(ngModel)]="title">
+    <mat-error *ngIf="articleControl.title">title cannot be empty!</mat-error>
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Body</mat-label>
+    <input matInput placeholder="body" required [(ngModel)]="body">
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Author</mat-label>
+    <input matInput placeholder="author" required [(ngModel)]="author">
+  </mat-form-field>
+</div>
+
