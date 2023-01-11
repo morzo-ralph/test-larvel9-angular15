@@ -1,20 +1,40 @@
-<ng-container *ngFor="let article of articles">
-  <main>
+<main>
+  <div class="article-container">
+    <div class="add-button-container">
+       <button mat-raised-button color="primary" (click)="addArticle()">Add</button>
+       <hr>
+    </div>
 
-    <mat-card>
-      <mat-card-header>
-        <mat-card-title> {{ article.title }} </mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <p>{{ article.body }}</p>
-        <p> <b> {{ article.author }} </b> </p>
 
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-button color="primary" (click)="editArticle(article)">EDIT</button>
-        <button mat-button color="primary">DELETE</button>
-      </mat-card-actions>
-    </mat-card>
+    <div class="spinner">
+      <ng-container *ngIf="isEmpty">
+        <mat-spinner></mat-spinner>
+      </ng-container>
+    </div>
 
-  </main>
-</ng-container>
+    <div class="cards">
+      <ng-container *ngIf="!isEmpty">
+        <ng-container *ngFor="let article of articles">
+
+
+          <mat-card>
+            <mat-card-header>
+              <mat-card-title> {{ article.title }} </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p>{{ article.body }}</p>
+              <p> <b> {{ article.author }} </b> </p>
+
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button color="primary" (click)="editArticle(article)">VIEW</button>
+            </mat-card-actions>
+          </mat-card>
+
+        </ng-container>
+      </ng-container>
+    </div>
+  </div>
+
+
+</main>

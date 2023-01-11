@@ -1,8 +1,7 @@
-<mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
-
-  <mat-tab label="First">
-
 <main class="container">
+  <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+
+    <mat-tab label="First">
 
   <mat-card>
     <mat-card-header>
@@ -26,7 +25,7 @@
     </mat-card-actions>
   </mat-card>
 
-</main>
+
 
   </mat-tab>
 
@@ -35,18 +34,18 @@
   <mat-tab label="Second">
 
 
-<main class="container">
+
 
   <mat-slide-toggle>Toggle Me!</mat-slide-toggle>
 
-</main>
+
 
   </mat-tab>
 
   <mat-tab label="Third">
 
 
-<main class="container">
+
 
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
@@ -81,8 +80,9 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
 
-</main>
 
   </mat-tab>
 
 </mat-tab-group>
+
+</main>

@@ -21,6 +21,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { AddArticleModalComponent } from './pages/article/add-article-modal/add-article-modal.component';
+import { HeaderComponent } from './interface/header/header.component';
+import { FooterComponent } from './interface/footer/footer.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -28,6 +34,9 @@ import { MatInputModule } from '@angular/material/input';
     HomepageComponent,
     ArticleComponent,
     EditArticleModalComponent,
+    AddArticleModalComponent,
+    HeaderComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,6 +56,9 @@ import { MatInputModule } from '@angular/material/input';
     ReactiveFormsModule,
     FormsModule,
     MatInputModule,
+    MatMenuModule,
+    MatSnackBarModule,
+    MatProgressSpinnerModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
       // Register the ServiceWorker as soon as the application is stable

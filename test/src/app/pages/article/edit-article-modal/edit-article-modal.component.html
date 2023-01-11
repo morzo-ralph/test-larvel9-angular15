@@ -1,24 +1,29 @@
+<div role="modal" class="modal">
+<div>
 <button mat-button mat-dialog-close><mat-icon>close</mat-icon></button>
-<h1 mat-dialog-title>Login</h1>
-<div [formGroup]="articleForm">
+<h1 mat-dialog-title>View Article</h1>
+
   <mat-form-field appearance="fill">
     <mat-label>Article Title</mat-label>
-    <input matInput placeholder="title" required [(ngModel)]="title">
-    <mat-error *ngIf="articleControl.title">title cannot be empty!</mat-error>
+    <input matInput placeholder="title" required [(ngModel)]="payload.title">
+
   </mat-form-field>
 
   <br>
 
   <mat-form-field appearance="fill">
     <mat-label>Body</mat-label>
-    <input matInput placeholder="body" required [(ngModel)]="body">
+    <input matInput placeholder="body" required [(ngModel)]="payload.body">
   </mat-form-field>
 
   <br>
 
   <mat-form-field appearance="fill">
     <mat-label>Author</mat-label>
-    <input matInput placeholder="author" required [(ngModel)]="author">
+    <input matInput placeholder="author" required [(ngModel)]="payload.author">
   </mat-form-field>
+  <br>
+  <button mat-button color="primary" (click)="updateArticle(payload)">UPDATE</button>
+  <button mat-button color="warn" (click)="deleteArticle(payload)">DELETE</button>
 </div>
-
+</div>

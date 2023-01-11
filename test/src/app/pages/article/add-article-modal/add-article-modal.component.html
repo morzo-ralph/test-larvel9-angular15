@@ -1,0 +1,30 @@
+<div role="modal" class="modal">
+  <div>
+  <button mat-button mat-dialog-close><mat-icon>close</mat-icon></button>
+  <h1 mat-dialog-title>Add Article</h1>
+<form [formGroup]="articleForm" (ngSubmit)="addArticle(payload)">
+  <mat-form-field appearance="fill">
+    <mat-label>Article Title</mat-label>
+    <input matInput placeholder="title" required [(ngModel)]="payload.title" formControlName="title">
+
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Body</mat-label>
+    <input matInput placeholder="body" required [(ngModel)]="payload.body" formControlName="body">
+  </mat-form-field>
+
+  <br>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Author</mat-label>
+    <input matInput placeholder="author" required [(ngModel)]="payload.author" formControlName="author">
+  </mat-form-field>
+  <br>
+  <button mat-button color="primary"> Add</button>
+</form>
+
+  </div>
+  </div>

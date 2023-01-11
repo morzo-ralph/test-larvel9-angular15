@@ -18,16 +18,16 @@ export class ServiceService {
     return this.http.post<any>(`${this.baseURL}/api/${uri}`, payload);
   }
 
-  put(uri: string, payload: object) {
-    return this.http.put<any>(`${this.baseURL}/api/${uri}`, payload);
+  put(uri: string, id: any, payload: object) {
+    return this.http.put<any>(`${this.baseURL}/api/${uri}/${id}`, payload);
   }
 
   patch(uri: string, payload: object) {
     return this.http.patch<any>(`${this.baseURL}/api/${uri}`, payload);
   }
 
-  delete(uri: string) {
-    return this.http.delete(`${this.baseURL}/api/${uri}`);
+  delete(uri: string, id: any) {
+    return this.http.delete(`${this.baseURL}/api/${uri}/${id}`);
   }
 
 }
